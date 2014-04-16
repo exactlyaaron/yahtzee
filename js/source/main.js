@@ -30,7 +30,7 @@
     for(var i = 0; i < count; i++){
       var num = Math.floor(Math.random() * 6) + 1;
       var dice = $dice[i];
-      $(dice).attr('src','media/dice-' + num + '.png');
+      $(dice).attr('src','./media/dice-' + num + '.png');
       console.log(num);
 
     }
