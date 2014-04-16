@@ -14,13 +14,26 @@
     $('body').keydown(move);
     $('#add-score').click(addScore);
     $('#roll').click(roll);
-
+    $('.dice').click(freeze);
     numDice = $('.dice').length;
     frozen = $('.frozen').length;
   }
 
+  function freeze(){
+    $(this).toggleClass('frozen');
+  }
+
   function roll(){
-    Math.random()
+    var $dice = $('.dice:not(.frozen)');
+    var count = $dice.length;
+
+    for(var i = 0; i < count; i++){
+      var num = Math.floor(Math.random() * 6) + 1;
+      var dice = $dice[i];
+      $(dice).attr('src','/media/dice-' + num + '.png');
+      console.log(num);
+
+    }
   }
 
   function addScore(event){

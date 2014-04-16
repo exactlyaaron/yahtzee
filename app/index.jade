@@ -27,22 +27,21 @@ html(lang='en')
 
             button#add.pure-button.pure-button-primary.button-add Add
 
-            input#score(type='text', placeholder='Add points')
-
-            button#add-score.pure-button.pure-button-primary.button-add Add Score
-
-      .pure-g
+      .pure-g#dice
         .pure-u-1-2
-          #dice
-            img.dice(src="/media/dice-1.png")
-            img.dice(src="/media/dice-1.png")
-            img.dice(src="/media/dice-1.png")
-            img.dice(src="/media/dice-1.png")
-            img.dice(src="/media/dice-1.png")
-            img.dice(src="/media/dice-1.png")
+          img.dice(src="/media/dice-1.png")
+          img.dice(src="/media/dice-1.png")
+          img.dice(src="/media/dice-1.png")
+          img.dice(src="/media/dice-1.png")
+          img.dice(src="/media/dice-1.png")
         .pure-u-1-2
           button.pure-button.button-success#roll Roll Dice
 
+      .pure-g
+        .pure-u-1form.pure-form
+          fieldset
+            input#score(type='text', placeholder='Add points')
+            button#add-score.pure-button.pure-button-primary.button-add Add Score
 
       .pure-g
         .pure-u-1
